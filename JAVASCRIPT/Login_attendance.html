@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mark your Attendance</h1>
+    <label for="">Enter your name:</label>
+    <input type="text" name="" id="name">
+    <label for="">Enter your employee number:</label>
+    <input type="number" name="" id="empno">
+    <label for="">Enter time:</label>
+    <input type="time" name="" id="time">
+    <button onclick="getData()">Submit</button>
+    <h2 id="msg"></h2>
+    <script>
+        function getData(){
+            var a= document.getElementById("name");
+            var b= document.getElementById("empno");
+            var c= document.getElementById("time");
+            var msg= document.getElementById("msg");
+            if(c.value<"12:00"){
+                msg.innerHTML="Hello "+a.value+"...Good Morning<br>Employee name:"+a.value+"<br>Employee number:"+b.value+"<br>Time:"+c.value;
+
+            }else if(c.value<"17:00"){
+            msg.innerHTML="Hello "+a.value+"...Good Afternoon<br>Employee name:"+a.value+"<br>Employee number:"+b.value +"<br>Time:"+c.value;
+            }else if(c.value<"19:00"){
+            msg.innerHTML="Hello "+a.value+"...Good Evening<br>Employee name:"+a.value+"<br>Employee number:"+b.value +"<br>Time:"+c.value;
+
+            }else{
+             msg.innerHTML="Hello "+a.value+"...Good Night<br>Employee name:"+a.value+"<br>Employee number:"+b.value +"<br>Time:"+c.value;
+
+            }
+            
+        }
+    </script>
+</body>
+</html>

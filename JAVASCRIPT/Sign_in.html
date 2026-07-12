@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_In</title>
+    <link rel="shortcut icon" href="./refer.png" type="image/x-icon">
+    <link rel="stylesheet" href="./fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+</head>
+<style>
+    #box{
+        height: 500px;
+        width: 600px;
+        background-color: black;
+        text-align: center;
+        border-radius: 30px;
+    }
+    #h{
+        color: white;
+        font-size: 60px;
+        padding-top: 30px;
+    }
+    i{
+        color: blue;
+        font-size: 30px;
+    }
+    input{
+        width: 400px;
+        height: 30px;
+    }
+    button{
+        height: 40px;
+        width: 90px;
+        background-color: white;
+        border-radius: 15px;
+    }
+    button:hover{
+        height: 45px;
+        width: 100px;
+    }
+</style>
+<body>
+    <style>
+        body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center; /* Horizontal */ 
+    align-items: center;
+}
+    </style>
+ <div id="main">
+    <div id="box">
+         <h1 id="h">SIGN IN</h1>
+         <i class="fa-solid fa-user"></i>
+         <input type="text" name="" id="username" placeholder="Enter your username">
+         <br><br>
+         <i class="fa-solid fa-unlock"></i>
+         <input type="password" name="" id="password" placeholder="Enter Your password"><br><br><br>
+         <button onclick="getData()">Submit</button>
+         <h1 id="msg"></h1>
+         
+         <script>
+            function getData(){
+            let username=document.getElementById("username");
+            let password=document.getElementById("password");
+            let msg=document.getElementById("msg");
+            let user="Admin";
+            let pass="Admin@123";
+            if(user==username.value){
+                if(pass==password.value){
+                    alert("Login successful!!");
+                }else{
+                    alert("invalid password")
+                    msg.innerHTML=`<i class="fa-solid fa-envelope"></i> <input type="email" name="" placeholder="Enter your mail-id"><br><br> <button onclick="getOtp()">Get OTP</button>`
+                                  
+                }
+            }else{
+                alert("Username not found");
+            }
+            }
+            var otp;
+            var otpTime;
+            function getOtp(){
+             otp=Math.ceil(Math.random()*10000);
+             alert("Your OTP is:"+otp);
+             msg.innerHTML=`<i class="fa-solid fa-key"></i><input type="text" name="" id="enteredOtp" placeholder="Enter Your OTP"><br><br><button onclick="verifyOtp()"> Verify OTP</button>`
+             let date=new Date();
+             otpTime=Date.now();
+            }
+            function verifyOtp(){
+                        var currentTime=Date.now();
+                        var entered=document.getElementById("enteredOtp");
+                        if((currentTime-otpTime)<30000){
+                            if(otp==Number(enteredOtp.value)){
+                            alert("Login Successful!");
+                        }else{
+                            alert("Invalid OTP! Try again!");
+                            msg.innerHTML=`<button class="otp" onclick="getOtp()">Request OTP</button>`;
+                        }
+                        }else{
+                            alert("OTP Expired!!");
+                            msg.innerHTML=`<br><br><br><button class="otp" onclick="getOtp()" id="request">Request OTP</button>`;
+                        }
+                    }
+         </script>
+    </div>
+ </div>
+</body>
+</html>

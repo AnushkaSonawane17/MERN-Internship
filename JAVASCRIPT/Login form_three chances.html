@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <input type="text" name="" id="user" placeholder="Enter username">
+    <input type="password" name="" id="pass" placeholder="Enter your password">
+    <button onclick="getData()">Submit</button>
+    <h2 id="msg"></h2>
+    <script>
+        var attempts=0;
+     function getData(){
+        var a= document.getElementById("user");
+        var b= document.getElementById("pass");
+        var msg= document.getElementById("msg");
+        
+        
+        if(a.value=="Anushka"){
+           if(b.value=="Anushka@17"){
+            msg.innerHTML="Login successful!"
+            attempts=0;
+           }else{
+              attempts++;
+               if(attempts<3){
+            msg.innerHTML="Invalid password, try again"
+           }else{
+            msg.innerHTML="Account frozen! Try again after 30 seconds"
+           }
+           } 
+        }else{
+           msg.innerHTML="User not found";
+        }
+    }
+    </script>
+</body>
+</html>

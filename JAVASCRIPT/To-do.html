@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+</head>
+<style>
+    #t{
+        height: 300px;
+        width: 500px;
+        background-color: #fff;
+        margin: 100px;
+        padding: 100px;
+        border: 10px solid darkgreen;
+    }
+    button{
+        height: 50px;
+        width: 150px;
+        background-color: rgb(25, 203, 25);
+        color: white;
+        margin-left: 20px;
+        border: none;
+        font-size: large;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    input{
+        height: 50px;
+        width: 300px;
+        text-align: center;
+        border-radius: 20px;
+        margin-left: 100px;
+    }
+    h1{
+        text-align: center;
+    }
+    .s{
+        margin-left: 100px;
+    }
+</style>
+<body>
+    <style>
+        body{
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <div id="t">
+    <h1>Todo App</h1>
+
+    <input type="text" id="todoInput" placeholder="Enter task"><br><br>
+
+    <button onclick="addTodo()" class="s">Add Todo</button>
+    <button onclick="removeLast()">Pop</button>
+    <button onclick="removeFirst()" class="s">Shift</button>
+    <button onclick="addFirst()">Unshift</button>
+
+    <ul id="todoList"></ul>
+
+    <script>
+ 
+        let todos = [];
+
+        function displayTodos() {
+
+            let todoList = document.getElementById("todoList");
+            todoList.innerHTML = "";
+
+            todos.forEach(function(task, index) {
+
+                let li = document.createElement("li");
+
+                // Task text
+                let span = document.createElement("span");
+                span.innerText = task;
+
+                // Update button
+                let updateBtn = document.createElement("button");
+                updateBtn.innerText = "Update";
+
+                updateBtn.onclick = function() {
+
+                    let updatedTask = prompt("Update task:", task);
+
+                    if(updatedTask !== "" && updatedTask !== null) {
+                        todos[index] = updatedTask;
+                        displayTodos();
+                    }
+                };
+
+                // Delete button
+                let deleteBtn = document.createElement("button");
+                deleteBtn.innerText = "Delete";
+
+                deleteBtn.onclick = function() {
+                    todos.splice(index, 1);
+                    displayTodos();
+                };
+
+                li.appendChild(span);
+                li.appendChild(updateBtn);
+                li.appendChild(deleteBtn);
+
+                todoList.appendChild(li);
+
+            });
+        }
+
+        function addTodo() {
+
+            let input = document.getElementById("todoInput");
+            let task = input.value;
+
+            if(task === "") {
+                alert("Enter a task");
+                return;
+            }
+
+            todos.push(task);
+            input.value = "";
+            displayTodos();
+        }
+
+        function removeLast() {
+            todos.pop();
+            displayTodos();
+        }
+
+        function removeFirst() {
+            todos.shift();
+            displayTodos();
+        }
+
+        function addFirst() {
+
+            let input = document.getElementById("todoInput");
+            let task = input.value;
+
+            if(task === "") {
+                alert("Enter a task");
+                return;
+            }
+
+            todos.unshift(task);
+            input.value = "";
+            displayTodos();
+        }
+
+    </script>
+</div>
+</body>
+</html>

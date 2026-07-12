@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="user" placeholder="Enter your username">
+    <br><br>
+    <input type="text" name="" id="pass" placeholder="Enter your password">
+    <br><br>
+    <button onclick="getClick()">LOGIN</button>
+    <br><br>
+    <h1 id="msg"></h1>
+    <script>
+        function getClick(){
+            let username=document.getElementById("user");
+            let password=document.getElementById("pass");
+            let Username="Admin";
+            let Password="admin@123";
+            let msg=document.getElementById("msg");
+            if(Username==username.value && Password==password.value){
+                alert("Login Successfully");
+            }
+            else{
+                alert("Inavalid password");
+                let telephone=document.getElementById("Tele");
+                msg.innerHTML=`<input type="text" name="" id="" placeholder="Enter your phone number"> <button onclick="gOtp">Get OTP</button>`;
+                let otp= Math.ceil(Math.random()*10000);
+                alert("OTP:"+otp);
+
+                
+                msg.innerHTML=`<input type="text" name="" id="otp" placeholder="Enter your otp"> <button onclick="verifyOtp()">Verify</button>`;
+            }
+
+                function verifyOtp(){
+                    let OTP=document.getElementById("otp");
+                    if(OTP==otp.value){
+                        alert="Verification Successful!";
+                    }else{
+                        alert("Invalid otp")
+                    }
+                }
+                
+            
+        }
+    </script>
+</body>
+</html>

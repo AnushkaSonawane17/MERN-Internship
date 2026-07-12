@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        #a{
+            height: 500px;
+            width: 700px;
+            background-color: rgb(198, 254, 220);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 120px;
+            margin-left: 355px;
+            border: 10px solid rgb(2, 116, 52);
+            
+        }
+    </style>
+</head>
+<body><style>
+    body{
+        background-color: rgb(35, 186, 100);
+    }
+</style><div id="a">
+    <h1>Login Form</h1>
+    <br><br>
+    <input type="text" name="" id="user" placeholder="Enter username">
+    <br><br>
+    <input type="password" name="" id="pass" placeholder="Enter Password">
+    <br><br>
+    <button onclick="getData()">Submit</button>
+    <h1 id="msg"></h1>
+    </div>
+    <script>
+        
+        function getData(){
+            var msg=document.getElementById("msg")
+            var a=document.getElementById("user")
+            var b=document.getElementById("pass")
+            
+            if(a.value=="Anushka"){
+
+                if(b.value=="Admin@123"){
+                    msg.innerHTML="Login successful... "+"Hello"+a.value;
+                }else{
+                    msg.innerHTML="Invalid password";
+                }
+            }else{
+                msg.innerHTML="Username not found";
+            }
+        }
+    </script>
+</body>
+</html>
+

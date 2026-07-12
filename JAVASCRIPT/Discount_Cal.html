@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Flipkart</h1>
+    <label for="">Enter product price:</label>
+    <input type="number" name="" id="price">
+    <br>
+    <br>
+    <label for="">Enter the Quantity:</label>
+    <input type="number" name="" id="quantity">
+    <br>
+    <br>
+    <button onclick="callBill()">Calculate Bill</button>
+    <br>
+    <br>
+    <button onclick="getDiscount1()">Apply 10% discount</button>
+    <button onclick="getDiscount2()">Apply 20% discount</button>
+    <button onclick="getDiscount3()">Apply 30% discount</button>
+    <h2 id="Result"></h2>
+    <script>
+        var price=document.getElementById("price");
+        var quantity=document.getElementById("quantity");
+        var result=document.getElementById("Result");
+        var totalbill=0;
+        function callBill(){
+            totalbill=(price.value)*(quantity.value)
+            result.innerHTML="Total bill:"+totalbill;
+        }
+        function getDiscount1(){
+            if(totalbill>=1000){
+                discount=totalbill*0.10;
+                result.innerHTML="You saved: ₹"+discount+"<br>Your bill after 10% discount is: ₹"+(totalbill-discount);
+            }else{
+                alert("To apply this discount add items worth "+(1000-totalbill)+" to your cart")
+            }
+
+        }
+        function getDiscount2(){
+            if(totalbill>=2000){
+                discount=totalbill*0.20;
+                result.innerHTML="You saved: ₹"+discount+"<br>Your bill after 20% discount is: ₹"+(totalbill-discount);
+
+            }
+            else{
+                alert("To apply this discount you nned to add items worth of "+(2000-totalbill)+" to your cart")
+            }
+        }
+        function getDiscount3(){
+            if(totalbill>=3000){
+                discount=totalbill*0.30;
+                result.innerHTML="You saved: ₹"+discount+"<br> Your bill after 30% discount is: ₹"+(totalbill-discount);
+            }else{
+                alert("To apply this discount you need to add items worth "+(3000-totalbill)+" to your cart");
+            }
+            
+        }
+    </script>
+</body>
+</html>
