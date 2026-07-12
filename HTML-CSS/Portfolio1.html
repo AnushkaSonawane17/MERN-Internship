@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="./portfolio.png" type="image/x-icon">
+    <link rel="stylesheet" href="./fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <style>
+        *{
+            background-color: black;
+            scroll-behavior: smooth;
+        }
+        nav{
+            height: 90px;
+            width: 100%;
+            background-color: black;
+            border-bottom: 2px solid #D89A6B;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            box-shadow:0px 6px 12px #D89A6B;
+        }
+        ul{
+            height: 90px;
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            font-size: larger;
+            border-bottom: 3px solid #C67C4E;
+            box-shadow:0px 6px 12px #D89A6B;
+            align-items: center;
+            text-decoration: none;
+
+        }
+        button{
+            height: 45px;
+            width: 150px;
+            margin-top: 20px;
+            margin-right: 25px;
+            border: 3px solid white;
+            color: #F5F5F0;
+            border-radius: 10px;
+            font-weight: 800;
+
+        }
+        #name{
+            margin-left: 30px;
+            font-size: xx-large;
+        }
+        button:hover{
+            height: 50px;
+            width: 155px;
+            background-color: #F5F5F0;
+            color: black;
+            border: 3px solid black;
+        }
+        #home{
+            color: #F5F5F0;
+            margin-top: 150px;
+            margin-left: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        h2{
+            margin: 20px;
+            font-size: 37px;
+        }
+        h1{
+            margin: 20px;
+            font-size: 74px;
+        }
+        p{
+            margin: 20px;
+            font-size: 20px;
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100px;
+            font-style: normal;
+            font-variation-settings:
+              "wdth" 100;
+        }
+        #dev{
+            margin-left: 100px;
+            margin-bottom: 30px;
+        }
+        #hero-right{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 10px solid #C67C4E;
+            box-shadow: 0px 0px 90px #D89A6B;
+            margin-right: 250px;
+            background-image: url(./Profile.png);
+            background-size: cover;
+            background-position: center;
+       }
+       #about{
+        margin-top: 300px;
+        color: #F5F5F0;
+        padding: 0px 200px 0px 200px;
+       }
+       #skills{
+        margin-top: 300px;
+        color: #F5F5F0;
+        padding: 0px 200px 0px 200px;
+       }
+       .skill-box{
+        height: 70px;
+        width: 200px;
+         border: 3px solid #C67C4E;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 20px;
+         background-color: rgb(22, 22, 22);
+       }
+       #skill-container{
+        margin-top: 50px;
+        display: flex;
+        gap: 50px;
+       }
+       .skill-box:hover{
+        height: 80px;
+        width: 210px;
+        box-shadow: 0px 0px 30px #D89A6B;
+       }
+       #project{
+        margin-top: 300px;
+        color: #F5F5F0;
+       }
+       .projects{
+        height: 320px;
+        width: 280px;
+        background-color: #F5F5F0;
+        border-radius: 15px;
+        border: 3px solid #F5F5F0;
+        display: flex;
+        flex-direction: column;
+       }
+
+       .projects:hover{
+        height: 340px;
+        width: 300px;
+        box-shadow: 0px 0px 30px #B5B5BC;
+       }
+       .project-img{
+         height:220px;
+         width:100%;
+         background-size:cover;
+         background-position:top;
+         border-radius: 15px;
+        }
+        #project-box{
+            display:flex;
+             flex-wrap:wrap;
+             justify-content:center;
+             gap:40px;
+             margin-top:40px;
+             padding-top: 5px;
+        }
+        body{
+            background-color: black;
+        }
+        .projects h4{
+        background:#F5F5F0;
+        color:black;
+        text-align:center;
+        padding:15px;
+        margin:0;
+        font-size:18px;
+        font-family:Roboto,sans-serif;
+}
+a{
+    color: #F5F5F0;
+}
+footer{
+    background:#111827;
+    text-align:center;
+    padding:25px;
+    color:#CBD5E1;
+    margin-top:50px;
+}
+#contact{
+    color: #F5F5F0;
+    margin-top: 300px;
+    text-align: center;
+}
+i{
+    font-size: 34px;
+}
+
+    </style>
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <header>
+    <nav>
+        <h1 id="name"><u>Anushka</u></h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li> <a href="#about">About Me</a></li>
+            <li> <a href="#skills">Skills</a></li>
+            <li> <a href="#project">Projects</a></li>
+        </ul>
+        <a href="#contact">
+        <button>Contact me</button>
+        </a>
+    </nav>
+   </header>
+
+     <section id="home">
+        <div id="hero-left">
+        <h2>Hi,</h2>
+        <h1>I'm Anushka</h1>
+        <h2 id="dev">A Frontend Developer</h2>
+        <p>I build responsive and interactive websites using HTML, CSS and JavaScript.</p>
+        </div>
+        <div id="hero-right">
+        </div>
+        </section>
+
+
+        <section id="about">
+            <h2><center><u>About Me</center></u></h2><br>
+            <p>I am Anushka Sonawane, currently pursuing Diploma in Computer Engineering in Y.B Patil Polytechnic, Akurdi. I am also working as an intern in Linkcode Technologies, strengthening my skill set by hands on work. I am fascinated in Web development and working more on it, especially on making the frontend interactive. Strengthening JavaScript, HTML, CSS, React js, Node js, etc</p>
+        </section>
+        
+        <section id="skills">
+            <h2><center><u>Skills</u></center></h2><br>
+           <div id="skill-container">
+            <div class="skill-box">C</div>
+            <div class="skill-box">C++</div>
+            <div class="skill-box">Java</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">Git/GitHub</div>  
+            </div>
+        </section>
+
+        <section id="project">
+          <h2><center><u>Projects</u></center></h2>
+          <div id="project-box">
+            <div class="projects">
+                <div class="project-img" style="background-image: url(./Flipkart.png);">
+                </div>
+                <h4>Flipkart Login page clone</h4>
+                <h4><a href="http://127.0.0.1:5500/Flipkart.html">Website</a></h4>
+            </div>
+            <div class="projects">
+                <div class="project-img" style="background-image: url(./sign.png);">
+                </div>
+                <h4>Sign in page with OTP generation</h4>
+                <h4><a href="http://127.0.0.1:5501/Sign_in.html">Website</a></h4>
+            </div>
+            <div class="projects">
+                <div class="project-img" style="background-image: url(./Car\ showroom.png);">
+                </div>
+                <h4>Interactive Car Showroom Website</h4>
+                <h4><a href="http://127.0.0.1:5500/searchBar.html">Website</a></h4>
+            </div>
+            <div class="projects">
+                <div class="project-img" style="background-image: url(./flower.png);">
+                </div>
+                <h4>Flower using animations</h4>
+                <h4><a href="http://127.0.0.1:5500/Flower.html">Website</a></h4>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+            <h2><center><u>Contact me</u></center></h2><br><br><br>
+            <p>Email : anushkadilipsonawane.7777@gmail.com</p>
+
+            <p>Phone : +91 XXXXX XXXXX</p>
+            <div id="socials">
+             <a href="https://github.com/AnushkaSonawane17"><i class="fa-brands fa-github"></i></a>
+            </div>
+
+            <footer>
+
+            <p>© 2026 Anushka. All Rights Reserved.</p>
+
+            </footer>
+
+        </section>
+
+</body>
+</html>

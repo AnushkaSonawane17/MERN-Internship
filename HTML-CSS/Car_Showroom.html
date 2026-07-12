@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showroom</title>
+    <link rel="shortcut icon" href="./racing-car.png" type="image/x-icon">
+    <style>
+        #c{
+            height: 600px;
+            width: 400px;
+            background-color: aliceblue;
+            border: 1px solid;
+            padding: 20px;
+            border-radius: 20px;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 0 10px 30px black;
+            color: black;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+
+        }
+        #img{
+            height: 300px;
+            width: 400px;
+        }
+        #Heading{
+            color: #fff;
+            font-size: 60px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 200px;
+            font-display: block;
+            text-align: center;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px #00ffff;
+        }
+        #button{
+            text-align: center;
+            margin-left: 485px;
+            height: 95px;
+            width: 500px;
+            font-size: 20px;
+            background-color: #ff4500;
+            padding: 15px 50px;
+            border-radius: 30px;
+            color: white;
+        }
+        #more{
+            position: relative;
+            bottom: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head> 
+<body>
+    <style>
+        body{
+            background-color: #000;
+            color: white;
+        }
+    </style>
+    <h1 id="Heading"><b><u>Car Showroom</u></b></h1><br><br><br>
+    <button onclick="getProduct()" id="button"><i>Show cars</i></button>
+    <br><br><br>
+    <div id="container"></div>
+    <script>
+        let card=document.getElementById("container");
+        let cars=[{
+            pname: "Koenigsegg Jesko",
+            cname:"Koenigsegg Automotive AB",
+            hp: "1280 bhp",
+            speed: "330 mph",
+            price:"₹24 Crore",
+            img:"./Jesko.jpg",
+            website:"./koenigsegg.html"
+        },{
+            pname: "Bugati Chiron",
+            cname:"Bugatti Automobiles S.A.S",
+            hp: "1578 hp",
+            speed:"260 mph",
+            price:"₹19.21 Crore",
+            img:"./Bugatti_Chiron.jpeg",
+            website:"./Chiron.html"
+        },{
+            pname: "Bugatti Mistral",
+            cname:"Bugatti Automobiles S.A.S",
+            hp:"1578 hp",
+            speed:"282 mph",
+            price:"₹41 crore",
+            img:"./Bugatti_Mistral.jpg",
+            website:"./Mistral.html",
+        },{
+            pname: "YangWang U9 Xtreme",
+            cname:"BYD Auto",
+            hp:"2978 hp",
+            speed:"308.4 mph",
+            price:"₹2.36 crore",
+            img:"./YangWang-U9-Xtreme.jpg",
+            website:"./Yangwang.html",
+        },{
+            pname: "SSC Tuatara",
+            cname:"SSC North America",
+            hp:"1750 hp",
+            speed:"316.11 mph",
+            price:"₹35 crore",
+            img:"./ssc_tuatara.jpg",
+            website:"./Tuatara.html",
+        }
+    ] 
+    function getProduct(){
+        cars.forEach((val)=>{
+            card.innerHTML+=`<div id="c"><img src="${val.img}" alt"" id="img">
+                             <h2><center>${val.pname}</center></h2>
+                             <h3>Company name: ${val.cname}</h3>
+                             <h3>Horsepower: ${val.hp}</h3>
+                             <h3>Speed: ${val.speed}</h3>
+                             <h3>Price: ${val.price}</h3><br>
+                             <h5><center><a href="${val.website}" id="more">More details?<br>Go to our website</a></center></h5>
+                             </div>`
+        })
+    }   
+
+    </script>
+</body>
+</html>

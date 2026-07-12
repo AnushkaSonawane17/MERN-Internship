@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smiley</title>
+    <style>
+        #container{
+            height: 600px;
+            width: 600px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: yellow;
+            display: flex;
+            position: relative;
+        }
+        #left_eye{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            position: absolute;
+            top: 180px;
+            left: 130px;
+            border-radius: 50%;
+        }
+        #inner_leye{
+            height: 60px;
+            width: 50px;
+            background-color: black;
+            position: absolute;
+            top: 180px;
+            right: 400px;
+            border-radius: 50%;
+        }
+        #right_eye{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            position: absolute;
+            top: 180px;
+            right: 130px;
+            border-radius: 50%;
+        }  
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left_eye">
+            <div id="inner_leye"></div>
+        </div>
+        <div id="right_eye">
+            <div id="inner_reye"></div>
+        </div>
+        <div id="mouth"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="./fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
+    <link rel="shortcut icon" href="./netflix.png" type="image/x-icon">
+    <style>
+        body{
+            height: 700px;
+            width: 100%;
+            background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5), rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(./Netflix_background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        img{
+            margin-top: 20px;
+            margin-left: 100px;
+        }
+        #t{
+            color: white;
+            background-color: transparent;
+            height: 35px;
+            width: 150px;
+            margin-left: 800px;
+            border: 1px solid white;
+            position: absolute;
+            top: 20px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        #s{
+            height: 35px;
+            width: 80px;
+            color: white;
+            background-color: red;
+            border-radius: 3px;
+            border: none;
+            position: absolute;
+            top: 20px;
+            margin-left: 970px;
+            font-weight: bold;
+        }
+        i{
+            padding: 10px;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 150px;
+            font-size: 65px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: -4px;
+        }
+        h3{
+            color: white;
+            text-align: center;
+            margin-top: -50px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: larger;
+        }
+        h4{
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            margin-top: 30px;
+        }
+        input{
+            height: 60px;
+            width: 400px;
+            background-color: transparent;
+            border: 1px solid white;
+            outline: none;
+            padding-left: 30px;
+            margin-left: 430px;
+            border-radius: 5px;
+        }
+        input::placeholder{
+            color: white;
+            font-weight: bold;
+        }
+        #g{
+            height: 65px;
+            width: 200px;
+            background-color: red;
+            font-size: x-large;
+            font-weight: bolder;
+            border: none;
+            outline: none;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 13px;
+            border-radius: 5px;
+            margin-left: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: 865px;
+            bottom: 65px
+        }
+    </style>
+</head>
+<body>
+    <img src="./Netflix_logo.png" alt="">
+    <button id="t"><i class="fa-solid fa-language"></i>English <i class="fa-solid fa-caret-down"></i></button>
+    <button id="s">Sign in</button>
+    <h1><p>Unlimited movies,<br> shows, and more</p></h1>
+    <h3>Starts at ₹149. Cancel at any time.</h3>
+    <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+    <input type="email" name="" id="" placeholder="Email address">
+    <button id="g">Get Started<i class="fa-solid fa-angle-right"></i></button>
+</body>
+</html>
